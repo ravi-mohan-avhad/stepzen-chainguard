@@ -1,4 +1,4 @@
-# Stepzen-ChainGuard
+## StepZen-ChainGuard
 
 ## Inspiration
 The world of **financial services is continuously evolving**, and now more than ever, banks and **financial institutions globally must innovate at scale and speed**. Even in its infancy, blockchain technology has demonstrated its ability to **revolutionize a variety of industries**. The characteristics of decentralization, transparency, and immutability appeal to businesses worldwide, but **finance is leading the way in adoption**.
