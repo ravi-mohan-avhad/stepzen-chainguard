@@ -6,9 +6,10 @@ According to Gartner, **blockchain applications could generate up to $3.1 trilli
 
 ## What it does
 
-Presenting our solution Chain Guard which is a **managed security solution** driven by web3 that can be deployed on any blockchain. Chain Guard necessitates a high level of integration with upstream and downstream data sources. To meet this demand, Tiger Graph has developed a series of connectors that enhance your existing analytics capabilities by improving your access to the capability of advanced analytics on connected data. The smart contract integrates with web3, which is the world's quickest and only enterprise-grade graph database. The graph solution stores the graphs of known malicious users. These **users are ranked according to a risk score** that indicates the likelihood of encountering them.
+Presenting our solution Chain Guard which is a **managed security solution** driven by StepZen GraphQL andWweb3 that can be deployed on any blockchain. Chain Guard necessitates a high level of integration with upstream and downstream data sources. To meet this demand, StepZen can enhance existing analytics capabilities by improving your access to the capability of advanced analytics on connected data. The smart contract integrates with web3, which is the world's quickest and only enterprise-grade graph database. The graph solution stores the graphs of known malicious users. These **users are ranked according to a risk score** that indicates the likelihood of encountering them.
 
-![Workflow](https://user-images.githubusercontent.com/107539208/175255741-fdb437fd-8062-40e6-803b-1a3b75c05f65.jpg)
+![StepZen ChainGuard - workflow](https://user-images.githubusercontent.com/107539208/179367107-ce1306ab-f454-4c21-acea-f9f1ce80c9a9.jpg)
+
 
 
 ## How we built it
@@ -20,8 +21,8 @@ For instance, if the user has a history of **denial-of-service attacks** or rece
 We want to be as secure as possible, where contracts can state that I will engage with users who have established their identity with this trusted third party. In essence, we offer a scalable source of confidence to a trust-less environment.
 
 The Chain Guard **Data Visualization** connections empower users with enhanced insights on linked data, helping them to maximize the value of their existing investments. 
-The solution for protecting smart contracts must be secure itself. Tiger Graph understands that we require not only performance but also safety and security.
-Due to the fact that the fees for smart contract execution are determined by the transaction and the speed of execution, the API response time must be extremely fast in order to minimize costs and optimize performance. We obtain results quickly using web3. Sub-second response time for queries involving the access and computation of tens of millions of entities and relationships. Our system takes advantage of parallelism at every level, from the storage engine to the high-level query language GSQL, to deliver industry-leading concurrency and performance. Financial institutions can expedite transformation, leverage the power of data to generate efficiencies, and enhance the client experience by leveraging the potential of collaborative innovation.
+The solution for protecting smart contracts must be secure itself. StepZen GraphQL understands that we require not only performance but also safety and security.
+Due to the fact that the fees for smart contract execution are determined by the transaction and the speed of execution, the API response time must be extremely fast in order to minimize costs and optimize performance. We obtain results quickly using web3. Sub-second response time for queries involving the access and computation of tens of millions of entities and relationships.  Financial institutions can expedite transformation, leverage the power of data to generate efficiencies, and enhance the client experience by leveraging the potential of collaborative innovation.
 
 
 ## Challenges we ran into
