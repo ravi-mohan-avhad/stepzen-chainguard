@@ -2,7 +2,7 @@ from bridge import Bridge
 
 
 class Adapter:
-    base_url = 'https://fallsburg.stepzen.net/api/binging-fox/__graphql'
+    base_url = 'https://fallsburg.stepzen.net/api/chainguard/__graphql'
     from_params = ['base', 'from', 'coin']
     to_params = ['quote', 'to', 'market']
 
