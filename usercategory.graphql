@@ -1,0 +1,19 @@
+  type UserRecords {
+  name: String!
+  id: Int!
+  category: String!
+
+}
+
+
+
+type Query {
+    
+  getUserRecordCategory(id: String!): [UserRecords]
+    @dbquery(
+      type: "postgresql"
+      schema: "chainguard"
+      table: "userrecords"
+      configuration: "postgresql_config"
+    )
+}

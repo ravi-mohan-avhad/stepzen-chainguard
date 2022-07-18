@@ -1,0 +1,6 @@
+# config.yaml
+
+configurationset:
+  - configuration:
+      name: postgresql_config
+      uri: postgresql://chainguard:chainguard@4321@tcp://0.tcp.in.ngrok.io:18576/chainguard
