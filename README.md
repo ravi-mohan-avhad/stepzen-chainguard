@@ -8,8 +8,7 @@ According to Gartner, **blockchain applications could generate up to $3.1 trilli
 
 Presenting our solution Chain Guard which is a **managed security solution** driven by StepZen GraphQL andWweb3 that can be deployed on any blockchain. Chain Guard necessitates a high level of integration with upstream and downstream data sources. To meet this demand, StepZen can enhance existing analytics capabilities by improving your access to the capability of advanced analytics on connected data. The smart contract integrates with web3, which is the world's quickest and only enterprise-grade graph database. The graph solution stores the graphs of known malicious users. These **users are ranked according to a risk score** that indicates the likelihood of encountering them.
 
-![StepZen ChainGuard - workflow](https://user-images.githubusercontent.com/107539208/179367107-ce1306ab-f454-4c21-acea-f9f1ce80c9a9.jpg)
-
+![chainguard - workflow](https://user-images.githubusercontent.com/107539208/179573908-3bee07cf-1910-403a-8ec1-3050e312362b.jpg)
 
 
 ## How we built it
@@ -36,3 +35,112 @@ Managed security solution driven by web3 that can be deployed on any blockchain.
 ## What's next for Chain Guard
 
 Integrating Artificial Intelligence enabled solution to accurately predict the risk score of users who can post threat to blockchain world.
+
+
+## API Project Structure
+
+Node is required for generation and recommended for development. `package.json` is always generated for a better development experience with prettier, commit hooks, scripts and so on.
+
+In the project configuration files for tools like git, prettier, eslint, husk, and others that are well known and you can find references in the web.
+
+`/src/*` structure follows default Java structure.
+- `/src/main/docker` - Docker configurations for the application and services that the application depends on
+
+## Development
+
+To start your application in the dev profile, run:
+
+```
+./gradlew
+```
+
+### CG Control Center
+
+CG Control Center can help you manage and control your application(s). You can start a local control center server (accessible on http://localhost:7419) with:
+
+```
+docker-compose -f src/main/docker/cg-control-center.yml up
+```
+
+## Building for production
+
+### Packaging as jar
+
+To build the final jar and optimize the chainguard application for production, run:
+
+```
+./gradlew -Pprod clean bootJar
+```
+
+To ensure everything worked, run:
+
+```
+java -jar build/libs/*.jar
+```
+
+### Packaging as war
+
+To package your application as a war in order to deploy it to an application server, run:
+
+```
+./gradlew -Pprod -Pwar clean bootWar
+```
+
+## Testing
+
+To launch your application's tests, run:
+
+```
+./gradlew test integrationTest jacocoTestReport
+```
+
+### Code quality
+
+Sonar is used to analyse code quality. You can start a local Sonar server (accessible on http://localhost:9001) with:
+
+```
+docker-compose -f src/main/docker/sonar.yml up -d
+```
+
+Note: we have turned off authentication in [src/main/docker/sonar.yml](src/main/docker/sonar.yml) for out of the box experience while trying out SonarQube, for real use cases turn it back on.
+
+You can run a Sonar analysis with using the [sonar-scanner](https://docs.sonarqube.org/display/SCAN/Analyzing+with+SonarQube+Scanner) or by using the gradle plugin.
+
+Then, run a Sonar analysis:
+
+```
+./gradlew -Pprod clean check jacocoTestReport sonarqube
+```
+
+
+## Using Docker to simplify development (optional)
+
+You can use Docker to improve your development experience. A number of docker-compose configuration are available in the [src/main/docker](src/main/docker) folder to launch required third party services.
+
+For example, to start a postgresql database in a docker container, run:
+
+```
+docker-compose -f src/main/docker/postgresql.yml up -d
+```
+
+To stop it and remove the container, run:
+
+```
+docker-compose -f src/main/docker/postgresql.yml down
+```
+
+You can also fully dockerize your application and all the services that it depends on.
+To achieve this, first build a docker image of your app by running:
+
+```
+./gradlew bootJar -Pprod jibDockerBuild
+```
+
+Then run:
+
+```
+docker-compose -f src/main/docker/app.yml up -d
+```
+
+
+
