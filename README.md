@@ -17,6 +17,10 @@ The **smart contract integrates with web3**, which is the world's quickest and o
 
 For instance, if the user has a history of **denial-of-service attacks** or recently stole money from another contract, your contract can automatically refuse to engage with them and quickly fail the action. Chain Guard adds a layer of security not only for developers, but also for users. We keep track of contracts that are running malware based on signatures and account information. 
 
+![chainguard - frontend]([https://www.youtube.com/watch?v=DxKr_qe23GA])
+
+
+
 We want to be as secure as possible, where contracts can state that I will engage with users who have established their identity with this trusted third party. In essence, we offer a scalable source of confidence to a trust-less environment.
 
 The Chain Guard **Data Visualization** connections empower users with enhanced insights on linked data, helping them to maximize the value of their existing investments. 
