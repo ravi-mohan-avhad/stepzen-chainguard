@@ -3,8 +3,7 @@ from bridge import Bridge
 
 class Adapter:
     base_url = 'https://fallsburg.stepzen.net/api/chainguard/__graphql'
-    from_params = ['base', 'from', 'coin']
-    to_params = ['quote', 'to', 'market']
+    
 
     def __init__(self, input):
         self.id = input.get('id', '1')
@@ -22,16 +21,6 @@ class Adapter:
         if self.request_data == {}:
             return False
         return True
-
-    def set_params(self):
-        for param in self.from_params:
-            self.from_param = self.request_data.get(param)
-            if self.from_param is not None:
-                break
-        for param in self.to_params:
-            self.to_param = self.request_data.get(param)
-            if self.to_param is not None:
-                break
 
     def create_request(self):
         try:
